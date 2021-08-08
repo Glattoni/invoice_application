@@ -2,20 +2,21 @@ import React, {
   useState,
   createContext,
   FC,
-  ReactChildren,
   useContext,
+  ReactNode,
 } from 'react';
+import { themes } from '../../components/Theme/themes';
 
 type ContextProps = {
-  theme: string;
-  switchTheme: (theme: string) => void;
+  theme: keyof typeof themes;
+  switchTheme: (theme: keyof typeof themes) => void;
 };
 
 const ThemeContext = createContext<Partial<ContextProps>>({});
 
-const ThemeStore: FC<ReactChildren> = ({ children }) => {
-  const [theme, setTheme] = useState<string>('light');
-  const switchTheme = (theme: string) => setTheme(theme);
+const ThemeStore: FC<ReactNode> = ({ children }) => {
+  const [theme, setTheme] = useState<keyof typeof themes>('light');
+  const switchTheme = (theme: keyof typeof themes) => setTheme(theme);
 
   return (
     <ThemeContext.Provider value={{ theme, switchTheme }}>
