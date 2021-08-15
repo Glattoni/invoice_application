@@ -9,17 +9,16 @@ import { themes } from '../../components/Theme/themes';
 
 type ContextProps = {
   theme: keyof typeof themes;
-  switchTheme: (theme: keyof typeof themes) => void;
+  setTheme: (theme: keyof typeof themes) => void;
 };
 
 const ThemeContext = createContext<Partial<ContextProps>>({});
 
 const ThemeStore: FC<ReactNode> = ({ children }) => {
   const [theme, setTheme] = useState<keyof typeof themes>('light');
-  const switchTheme = (theme: keyof typeof themes) => setTheme(theme);
 
   return (
-    <ThemeContext.Provider value={{ theme, switchTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   );
