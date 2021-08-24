@@ -8,7 +8,7 @@ export const Wrapper = styled.aside`
   right: 0;
   display: flex;
   justify-content: space-between;
-  background-color: ${({ theme }) => theme.asideBackground};
+  background-color: ${({ theme }) => theme.colors.asideBackground};
   height: 4.5rem;
 `;
 
@@ -17,7 +17,7 @@ export const LogoWrapper = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: ${({ theme }) => theme.primary};
+  background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 0rem 1.25rem 1.25rem 0rem;
   min-width: 4.5rem;
   overflow: hidden;
@@ -31,7 +31,7 @@ export const LogoWrapper = styled.div`
     right: 0;
     width: 100%;
     height: 100%;
-    background-color: ${({ theme }) => theme.primaryLight};
+    background-color: ${({ theme }) => theme.colors.primaryLight};
     border-radius: 1.25rem 0rem 0rem 1.25rem;
   }
 `;
@@ -45,7 +45,7 @@ export const ThemeContainer = styled.button`
   align-items: center;
   justify-content: center;
   padding: 0;
-  border-right: 1px solid ${({ theme }) => theme.asideBorder};
+  border-right: 1px solid ${({ theme }) => theme.colors.asideBorder};
 `;
 
 export const AlignContainer = styled.div`

@@ -4,7 +4,7 @@ import logo from '/public/icons/logo.svg';
 import iconSun from '/public/icons/sun.svg';
 import iconMoon from '/public/icons/moon.svg';
 import avatar from '/public/images/avatar.png';
-import { useThemeContext } from '../../contexts/global_theme/ThemeStore';
+import { useThemeContext } from '../../contexts/themeContext/ThemeStore';
 import {
   Wrapper,
   LogoWrapper,
@@ -17,19 +17,14 @@ import {
 } from './Sidebar.styles';
 
 const Sidebar = () => {
-  const { theme, setTheme } = useThemeContext();
-  const switchTheme = () => {
-    if (setTheme) {
-      theme === 'light' ? setTheme('dark') : setTheme('light');
-    }
-  };
+  const { theme, toggleTheme } = useThemeContext();
   return (
     <Wrapper>
       <LogoWrapper>
         <StyledImage src={logo} alt='logo' />
       </LogoWrapper>
       <Container>
-        <ThemeContainer onClick={switchTheme}>
+        <ThemeContainer onClick={toggleTheme}>
           <AlignContainer>
             <Image
               src={theme === 'light' ? iconSun : iconMoon}
