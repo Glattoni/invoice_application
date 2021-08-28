@@ -7,7 +7,7 @@ export enum Breakpoints {
 }
 
 export const up = (breakpoint: Breakpoints) =>
-  `@media (min-width: calc(${breakpoint}px + 0.02px))`;
+  `@media (min-width: ${breakpoint}px)`;
 
 export const down = (breakpoint: Breakpoints) =>
   `@media (max-width: ${breakpoint}px)`;
@@ -16,4 +16,4 @@ export const between = (
   breakpointMin: Breakpoints,
   breakpointMax: Breakpoints
 ) =>
-  `@media (min-width: calc(${breakpointMin}px + 0.02px)) and (max-width: ${breakpointMax}px)`;
+  `@media (min-width: calc(${breakpointMin}px) and (max-width: ${breakpointMax}px)`;
