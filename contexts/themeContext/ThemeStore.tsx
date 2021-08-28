@@ -6,7 +6,7 @@ import React, {
   ReactNode,
 } from 'react';
 
-import { themes } from '../../components/Theme/themes';
+import { themes } from '../../constants/themes';
 
 type ContextProps = {
   theme: keyof typeof themes;
