@@ -10,7 +10,7 @@ import {
   LogoWrapper,
   Container,
   AvatarContainer,
-  StyledImage,
+  StyledReactSVG,
   ThemeContainer,
   AlignContainer,
   StyledAvatar,
@@ -18,10 +18,11 @@ import {
 
 const Sidebar = () => {
   const { theme, toggleTheme } = useThemeContext();
+
   return (
     <Wrapper>
       <LogoWrapper>
-        <StyledImage src={logo} alt='logo' />
+        <StyledReactSVG src={logo.src} alt='logo' />
       </LogoWrapper>
       <Container>
         <ThemeContainer onClick={toggleTheme}>
@@ -34,7 +35,7 @@ const Sidebar = () => {
         </ThemeContainer>
         <AvatarContainer>
           <AlignContainer>
-            <StyledAvatar src={avatar} alt='avatar' width={32} height={32} />
+            <StyledAvatar src={avatar.src} alt='avatar' />
           </AlignContainer>
         </AvatarContainer>
       </Container>
