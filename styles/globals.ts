@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyle = createGlobalStyle`
 /* Start of fonts */
 @font-face {
   font-family: 'Spartan';
@@ -24,6 +27,10 @@ body {
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body {
+  font-size: 0.75rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -48,10 +55,7 @@ button {
   background: none;
   border: none;
   cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
 }
-
-.container {
-  width: 87vw;
-  max-width: 730px;
-  margin: 0 auto;
-}
+`;
