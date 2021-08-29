@@ -9,7 +9,7 @@ export const Wrapper = styled.aside`
   right: 0;
   display: flex;
   justify-content: space-between;
-  background-color: ${({ theme }) => theme.colors.asideBackground};
+  background-color: ${({ theme }) => theme.colors.oxfordBlue};
   min-height: 4.5rem;
 
   ${up(Breakpoints.LG)} {
@@ -68,11 +68,11 @@ export const ThemeContainer = styled.button`
   align-items: center;
   justify-content: center;
   padding: 0;
-  border-right: 1px solid ${({ theme }) => theme.colors.asideBorder};
+  border-right: 1px solid ${({ theme }) => theme.colors.fiord};
 
   ${up(Breakpoints.XL)} {
     border-right: none;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.asideBorder};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.fiord};
   }
 `;
 

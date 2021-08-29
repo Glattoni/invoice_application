@@ -1,4 +1,5 @@
 import Sidebar from './Sidebar/Sidebar';
 import Theme from './Theme/Theme';
+import Button from './Button/Button';
 
-export { Sidebar, Theme };
+export { Sidebar, Theme, Button };
