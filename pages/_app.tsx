@@ -1,4 +1,3 @@
-import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { ThemeStore } from '../contexts/themeContext/ThemeStore';
 import { Theme } from '../components';
