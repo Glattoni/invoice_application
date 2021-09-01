@@ -42,6 +42,7 @@ a {
 
 ul {
   list-style-type: none;
+  margin: 0;
   padding: 0;
 }
 
@@ -57,5 +58,10 @@ button {
   cursor: pointer;
   font-family: inherit;
   font-size: inherit;
+  color: inherit;
+}
+
+input {
+  margin: 0;
 }
 `;

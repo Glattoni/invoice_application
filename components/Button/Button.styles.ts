@@ -13,7 +13,10 @@ export const StyledButton = styled.button<{
   font-weight: bold;
   letter-spacing: -0.25px;
   line-height: 0.95rem;
-  transition: background-color 0.3s linear, color 0.3s linear;
+  transition: ${({ theme }) =>
+    `${theme.transitions.primary(
+      'background-color'
+    )}, ${theme.transitions.primary('color')}`};
 
   span {
     display: none;
