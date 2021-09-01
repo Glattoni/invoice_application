@@ -12,7 +12,7 @@ const Button: FC<Props> = ({ variant, withIcon, children }) => {
     <StyledButton variant={variant} withIcon={withIcon}>
       {withIcon && (
         <PlusButton>
-          <Image src='/icons/plus.svg' width={10} height={10} />
+          <Image src='/icons/plus.svg' width={10} height={10} alt='plus icon' />
         </PlusButton>
       )}
       {children}

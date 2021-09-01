@@ -21,7 +21,7 @@ const FilterByStatus = () => {
       <OptionList isOpen={isOpen}>
         {filterOptions.map((option: string) => {
           return (
-            <OptionItem>
+            <OptionItem key={option}>
               <Input type='radio' name='filter-option' id={option} />
               <Radio htmlFor={option}>
                 <Checkbox />
