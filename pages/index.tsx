@@ -1,13 +1,15 @@
 import { GlobalStyle } from '../styles/globals';
 import { Main, Container } from '../styles';
-import { Sidebar, Button } from '../components';
+import { Sidebar, FilterByStatus, Button } from '../components';
 
 export default function Home() {
   return (
     <>
       <Sidebar />
       <Main>
-        <Container></Container>
+        <Container>
+          <FilterByStatus></FilterByStatus>
+        </Container>
       </Main>
       <GlobalStyle />
     </>

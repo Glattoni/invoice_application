@@ -2,6 +2,7 @@ export const themes = {
   light: {
     colors: {
       white: 'hsl(0, 0%, 100%)',
+      base: 'hsl(228, 29%, 7%)',
       alabaster: 'hsl(0, 0%, 97%)',
       primary: 'hsl(252, 94%, 67%)',
       primaryLight: 'hsl(252, 100%, 73%)',
@@ -18,11 +19,20 @@ export const themes = {
       vulcan: 'hsl(228, 29%, 7%)',
       monaLisa: 'hsl(0, 100%, 80%)',
       blueBell: 'hsl(231, 36%, 63%)',
+      mirage: 'hsl(231, 73%, 93%)',
+      martinique: 'hsl(0, 0%, 100%)',
+    },
+    boxShadows: {
+      statusFilter: '0rem 0.625rem 1.25rem hsla(232, 38%, 45%, 0.25)',
+    },
+    transitions: {
+      primary: (property: string) => `${property} 0.3s linear`,
     },
   },
   dark: {
     colors: {
       white: 'hsl(0, 0%, 100%)',
+      base: 'hsl(0, 0%, 100%)',
       alabaster: 'hsl(233, 30%, 11%)',
       primary: 'hsl(252, 94%, 67%)',
       primaryLight: 'hsl(252, 100%, 73%)',
@@ -39,6 +49,14 @@ export const themes = {
       vulcan: 'hsl(231, 20%, 27%)',
       monaLisa: 'hsl(0, 100%, 80%)',
       blueBell: 'hsl(231, 36%, 63%)',
+      mirage: 'hsl(233, 31%, 17%)',
+      martinique: 'hsl(232, 30%, 21%)',
+    },
+    boxShadows: {
+      statusFilter: '0rem 0.625rem 1.25rem hsla(0, 0%, 0%, 0.25)',
+    },
+    transitions: {
+      primary: (property: string) => `${property} 0.3s linear`,
     },
   },
 };

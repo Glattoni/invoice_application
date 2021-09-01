@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const Main = styled.main`
-  background-color: ${({ theme }) => theme.colors.alabaster};
   min-height: 100vh;
+  color: ${({ theme }) => theme.colors.base};
+  background-color: ${({ theme }) => theme.colors.alabaster};
 `;
 
 export const Container = styled.div`
