@@ -27,11 +27,12 @@ export const StyledButton = styled.button<{
       case 'default':
         return `
 			background-color: ${theme.colors.primary};
-			padding: 0.5rem 1rem 0.5rem 0.5rem;
+			padding: 0.375rem 0.525rem 0.375rem 0.375rem;
 			&:hover {
 				background-color: ${theme.colors.primaryLight}
 			}
 			${up(Breakpoints.LG)}{
+			padding: 0.5rem 1rem 0.5rem 0.5rem;
 				span {
 					display: inline;
 				}
@@ -86,7 +87,11 @@ export const PlusButton = styled.div`
   justify-content: center;
   width: 2rem;
   height: 2rem;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.colors.white};
+
+  ${up(Breakpoints.LG)} {
+    margin-right: 1rem;
+  }
 `;

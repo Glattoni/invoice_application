@@ -3,11 +3,11 @@ import Image from 'next/image';
 import { StyledButton, PlusButton } from './Button.styles';
 
 type Props = {
-  variant: 'default' | 'paid' | 'edit' | 'draft' | 'delete' | 'item';
+  variant?: 'default' | 'paid' | 'edit' | 'draft' | 'delete' | 'item';
   withIcon?: boolean;
 };
 
-const Button: FC<Props> = ({ variant, withIcon, children }) => {
+const Button: FC<Props> = ({ variant = 'default', withIcon, children }) => {
   return (
     <StyledButton variant={variant} withIcon={withIcon}>
       {withIcon && (
