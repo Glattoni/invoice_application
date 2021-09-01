@@ -7,9 +7,7 @@ export default function Home() {
     <>
       <Sidebar />
       <Main>
-        <Container>
-          <FilterByStatus></FilterByStatus>
-        </Container>
+        <Container></Container>
       </Main>
       <GlobalStyle />
     </>
