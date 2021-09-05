@@ -6,35 +6,28 @@ export const Wrapper = styled.header`
   align-items: center;
   justify-content: space-between;
   margin-top: 2rem;
-`;
-
-export const Content = styled.div`
-  h1 {
-    font-size: 1.25rem;
-    line-height: 1.375rem;
-    letter-spacing: -0.625px;
-    margin-bottom: 0.25rem;
-  }
-  p {
-    color: ${({ theme }) => theme.colors.baliHai};
-  }
-  .long-description {
-    display: none;
-  }
 
   ${up(Breakpoints.LG)} {
-    h1 {
-      font-size: 2rem;
-      line-height: 2.25rem;
-      margin-bottom: 0.5rem;
-    }
-    .short-description {
-      display: none;
-    }
-    .long-description {
-      display: inline-block;
-    }
+    margin-top: 3.5rem;
   }
+`;
+
+export const Title = styled.h1`
+  font-size: 1.25rem;
+  line-height: 1.375rem;
+  letter-spacing: -0.925px;
+  margin-bottom: 0.25rem;
+
+  ${up(Breakpoints.LG)} {
+    font-size: 2rem;
+    line-height: 2.25rem;
+    margin-bottom: 0.5rem;
+  }
+`;
+
+export const Description = styled.span`
+  color: ${({ theme }) => theme.colors.baliHai};
+  letter-spacing: -0.25px;
 `;
 
 export const Buttons = styled.div`

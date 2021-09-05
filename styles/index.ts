@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { between, Breakpoints, up } from '../constants/breakpoints';
+import { between, Breakpoints } from '../constants/breakpoints';
 
 export const Main = styled.main`
   min-height: 100vh;
@@ -8,7 +8,7 @@ export const Main = styled.main`
 `;
 
 export const Container = styled.div`
-  width: 87vw;
+  width: 87.5vw;
   max-width: 730px;
   margin: 0 auto;
   padding-top: 4.5rem;

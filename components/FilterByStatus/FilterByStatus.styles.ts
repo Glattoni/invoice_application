@@ -9,11 +9,8 @@ export const Wrapper = styled.div`
 export const Header = styled.button<{ isOpen: boolean }>`
   position: relative;
   padding: 0;
-  padding-right: 1.5rem;
+  padding-right: 1.1rem;
   font-weight: bold;
-  span {
-    display: none;
-  }
 
   &:after {
     content: url('/icons/arrow-down.svg');
@@ -26,9 +23,15 @@ export const Header = styled.button<{ isOpen: boolean }>`
   }
 
   ${up(Breakpoints.LG)} {
-    span {
-      display: inline;
-    }
+    padding-right: 1.5rem;
+  }
+`;
+
+export const FullName = styled.span`
+  display: none;
+
+  ${up(Breakpoints.LG)} {
+    display: inline;
   }
 `;
 
@@ -84,16 +87,17 @@ export const Radio = styled.label`
   align-items: center;
   gap: 1rem;
   cursor: pointer;
-  .title {
-    line-height: 0.925rem;
-    text-transform: capitalize;
-  }
 
   &:hover {
     ${Checkbox} {
       border: 1px solid ${({ theme }) => theme.colors.primary};
     }
   }
+`;
+
+export const Title = styled.span`
+  line-height: 0.925rem;
+  text-transform: capitalize;
 `;
 
 export const Input = styled.input`

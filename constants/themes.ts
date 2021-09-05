@@ -21,6 +21,7 @@ export const themes = {
       blueBell: 'hsl(231, 36%, 63%)',
       mirage: 'hsl(231, 73%, 93%)',
       martinique: 'hsl(0, 0%, 100%)',
+      manatee: 'hsl(231, 20%, 61%)',
     },
     boxShadows: {
       statusFilter: '0rem 0.625rem 1.25rem hsla(232, 38%, 45%, 0.25)',
@@ -51,6 +52,7 @@ export const themes = {
       blueBell: 'hsl(231, 36%, 63%)',
       mirage: 'hsl(233, 31%, 17%)',
       martinique: 'hsl(232, 30%, 21%)',
+      manatee: 'hsl(231, 73%, 93%)',
     },
     boxShadows: {
       statusFilter: '0rem 0.625rem 1.25rem hsla(0, 0%, 0%, 0.25)',
