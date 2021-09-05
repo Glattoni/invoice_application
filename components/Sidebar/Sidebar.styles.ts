@@ -19,7 +19,7 @@ export const Wrapper = styled.aside`
     flex-direction: column;
     width: 6.25rem;
     min-height: 100vh;
-    border-radius: 0rem 1.25rem 1.25rem 0rem;
+    border-radius: 0 1.25rem 1.25rem 0;
   }
 `;
 
@@ -29,7 +29,7 @@ export const LogoWrapper = styled.div`
   align-items: center;
   position: relative;
   background-color: ${({ theme }) => theme.colors.primary};
-  border-radius: 0rem 1.25rem 1.25rem 0rem;
+  border-radius: 0 1.25rem 1.25rem 0;
   min-width: 4.5rem;
   overflow: hidden;
 
@@ -43,12 +43,13 @@ export const LogoWrapper = styled.div`
     width: 100%;
     height: 100%;
     background-color: ${({ theme }) => theme.colors.primaryLight};
-    border-radius: 1.25rem 0rem 0rem 1.25rem;
+    border-radius: 1.25rem 0 0 1.25rem;
   }
 
   ${up(Breakpoints.LG)} {
     width: 5rem;
   }
+
   ${up(Breakpoints.XL)} {
     height: 6.25rem;
     width: 100%;
@@ -85,8 +86,9 @@ export const AlignContainer = styled.div`
   padding: 0 1.5rem;
 
   ${up(Breakpoints.LG)} {
-    padding: 0 2rem;
+    padding: 0 1.85rem;
   }
+
   ${up(Breakpoints.XL)} {
     padding: 2rem 0;
   }
@@ -111,6 +113,7 @@ export const StyledReactSVG = styled(ReactSVG)`
     width: 1.9rem;
     height: 1.8rem;
   }
+
   ${up(Breakpoints.XL)} {
     width: 2.5rem;
     height: 2.4rem;

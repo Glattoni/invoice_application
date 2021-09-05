@@ -20,6 +20,7 @@ export const StyledButton = styled.button<{
 
   span {
     display: none;
+    margin-left: 0.25em;
   }
 
   ${({ variant, theme }) => {

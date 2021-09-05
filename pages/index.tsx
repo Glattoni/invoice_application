@@ -1,6 +1,6 @@
 import { GlobalStyle } from '../styles/globals';
 import { Main, Container } from '../styles';
-import { Sidebar, Header } from '../components';
+import { Sidebar, Header, Placeholder } from '../components';
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
       <Main>
         <Container>
           <Header />
+          <Placeholder />
         </Container>
       </Main>
       <GlobalStyle />

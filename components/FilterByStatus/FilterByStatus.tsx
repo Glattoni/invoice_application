@@ -7,6 +7,8 @@ import {
   Radio,
   Checkbox,
   Input,
+  Title,
+  FullName,
 } from './FilterByStatus.styles';
 
 const filterOptions: string[] = ['draft', 'pending', 'paid'];
@@ -16,7 +18,7 @@ const FilterByStatus = () => {
   return (
     <Wrapper>
       <Header isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
-        Filter <span>by status</span>
+        Filter <FullName>by status</FullName>
       </Header>
       <OptionList isOpen={isOpen}>
         {filterOptions.map((option: string) => {
@@ -25,7 +27,7 @@ const FilterByStatus = () => {
               <Input type='radio' name='filter-option' id={option} />
               <Radio htmlFor={option}>
                 <Checkbox />
-                <span className='title'>{option}</span>
+                <Title>{option}</Title>
               </Radio>
             </OptionItem>
           );
