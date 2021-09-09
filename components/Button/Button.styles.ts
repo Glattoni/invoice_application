@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Breakpoints, up } from '../../constants/breakpoints';
 
 export const StyledButton = styled.button<{
@@ -26,57 +26,57 @@ export const StyledButton = styled.button<{
   ${({ variant, theme }) => {
     switch (variant) {
       case 'default':
-        return `
-			background-color: ${theme.colors.primary};
-			padding: 0.375rem 0.525rem 0.375rem 0.375rem;
-			&:hover {
-				background-color: ${theme.colors.primaryLight}
-			}
-			${up(Breakpoints.LG)}{
-			padding: 0.5rem 1rem 0.5rem 0.5rem;
-				span {
-					display: inline;
-				}
-			}
-		`;
+        return css`
+          background-color: ${theme.colors.primary};
+          padding: 0.375rem 0.525rem 0.375rem 0.375rem;
+          &:hover {
+            background-color: ${theme.colors.primaryLight};
+          }
+          ${up(Breakpoints.LG)} {
+            padding: 0.5rem 1rem 0.5rem 0.5rem;
+            span {
+              display: inline;
+            }
+          }
+        `;
       case 'paid':
-        return `
-			background-color: ${theme.colors.primary};
-			&:hover {
-				background-color: ${theme.colors.primaryLight}
-			}
-		`;
+        return css`
+          background-color: ${theme.colors.primary};
+          &:hover {
+            background-color: ${theme.colors.primaryLight};
+          }
+        `;
       case 'edit':
-        return `
-			color: ${theme.colors.shipCove};
-			background-color: ${theme.colors.whiteLilac};
-			&:hover {
-				background-color: ${theme.colors.moonRaker}
-			}
-		`;
+        return css`
+          color: ${theme.colors.shipCove};
+          background-color: ${theme.colors.whiteLilac};
+          &:hover {
+            background-color: ${theme.colors.moonRaker};
+          }
+        `;
       case 'draft':
-        return `
-			color: ${theme.colors.shipCove};
-			background-color: ${theme.colors.oxfordBlue};
-			&:hover {
-				background-color: ${theme.colors.vulcan}
-			}
-		`;
+        return css`
+          color: ${theme.colors.shipCove};
+          background-color: ${theme.colors.oxfordBlue};
+          &:hover {
+            background-color: ${theme.colors.vulcan};
+          }
+        `;
       case 'delete':
-        return `
-			background-color: ${theme.colors.burntSienna};
-			&:hover {
-				background-color: ${theme.colors.monaLisa}
-			}
-		`;
+        return css`
+          background-color: ${theme.colors.burntSienna};
+          &:hover {
+            background-color: ${theme.colors.monaLisa};
+          }
+        `;
       case 'item':
-        return `
-			color: ${theme.colors.blueBell};
-			background-color: ${theme.colors.selagoLight};
-			&:hover {
-				background-color: ${theme.colors.selago}
-			}
-		`;
+        return css`
+          color: ${theme.colors.blueBell};
+          background-color: ${theme.colors.selagoLight};
+          &:hover {
+            background-color: ${theme.colors.selago};
+          }
+        `;
     }
   }}
 `;
