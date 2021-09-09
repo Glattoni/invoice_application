@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Status = styled.span`
   position: relative;
@@ -17,7 +17,7 @@ export const Status = styled.span`
 `;
 
 export const Wrapper = styled.div<{ variant: string }>`
-  max-width: 6.5rem;
+  min-width: 6.5rem;
   padding: 0.8rem 0;
   border-radius: 0.375rem;
   text-align: center;
@@ -26,29 +26,29 @@ export const Wrapper = styled.div<{ variant: string }>`
   ${({ variant, theme }) => {
     switch (variant) {
       case 'paid':
-        return `
-			color: ${theme.colors.shamrock};
-			background-color: ${theme.colors.shamrockLight};
-			${Status}::after {
-				background-color: ${theme.colors.shamrock};
-			}
-		  `;
+        return css`
+          color: ${theme.colors.shamrock};
+          background-color: ${theme.colors.shamrockLight};
+          ${Status}::after {
+            background-color: ${theme.colors.shamrock};
+          }
+        `;
       case 'pending':
-        return `
-			color: ${theme.colors.pizazz};
-			background-color: ${theme.colors.pizazzLight};
-			${Status}::after {
-				background-color: ${theme.colors.pizazz};
-			}
-		  `;
+        return css`
+          color: ${theme.colors.pizazz};
+          background-color: ${theme.colors.pizazzLight};
+          ${Status}::after {
+            background-color: ${theme.colors.pizazz};
+          }
+        `;
       case 'draft':
-        return `
-			color: ${theme.colors.brightGray};
-			background-color: ${theme.colors.dustyGray};
-			${Status}::after {
-				background-color: ${theme.colors.brightGray};
-			}
-		  `;
+        return css`
+          color: ${theme.colors.dustyGray};
+          background-color: ${theme.colors.brightGray};
+          ${Status}::after {
+            background-color: ${theme.colors.dustyGray};
+          }
+        `;
     }
   }}
 `;

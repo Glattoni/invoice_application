@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { between, Breakpoints } from '../constants/breakpoints';
+import { up, between, Breakpoints } from '../constants/breakpoints';
 
 export const Main = styled.main`
   min-height: 100vh;
@@ -15,5 +15,16 @@ export const Container = styled.div`
 
   ${between(Breakpoints.LG, Breakpoints.XL)} {
     padding-top: 5rem;
+  }
+`;
+
+export const InvoiceList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  ${up(Breakpoints.LG)} {
+    margin-top: 3.5rem;
   }
 `;
