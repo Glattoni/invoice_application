@@ -7,8 +7,8 @@ export const Container = styled.a`
   display: grid;
   grid-template-rows: 1.5fr 1fr 1fr;
   grid-template-areas:
-    'uid clientName' 'paymentDue status'
-    'totalAmount status';
+    'id clientName' 'paymentDue status'
+    'total status';
   background-color: ${({ theme }) => theme.colors.portGore};
   border-radius: 0.5rem;
   padding: 1.5rem;
@@ -16,7 +16,7 @@ export const Container = styled.a`
 
   ${up(Breakpoints.LG)} {
     grid-template-rows: none;
-    grid-template-columns: 1.4fr 1.95fr 1.9fr 2fr 2.3fr 0.4fr;
+    grid-template-columns: 1.4fr 2.25fr 1.9fr 2fr 2.3fr 0.4fr;
     padding: 1rem 1.5rem;
     align-items: center;
   }
@@ -26,8 +26,8 @@ export const Container = styled.a`
   }
 `;
 
-export const UID = styled.div`
-  grid-area: uid;
+export const ID = styled.div`
+  grid-area: id;
   font-weight: bold;
 
   ${up(Breakpoints.LG)} {
@@ -40,7 +40,7 @@ export const Hash = styled.span`
   color: ${({ theme }) => theme.colors.wistFull};
 `;
 
-export const Payer = styled.div`
+export const ClientName = styled.div`
   grid-area: clientName;
   justify-self: end;
   color: ${({ theme }) => theme.colors.wildblueYonder};
@@ -49,7 +49,7 @@ export const Payer = styled.div`
   ${up(Breakpoints.LG)} {
     grid-area: unset;
     order: 3;
-    justify-self: center;
+    justify-self: left;
   }
 `;
 
@@ -65,12 +65,15 @@ export const PaymentDue = styled.div`
   }
 `;
 
-export const TotalAmount = styled.div`
-  grid-area: totalAmount;
+export const Total = styled.div`
+  grid-area: total;
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: -0.8px;
   font-weight: bold;
+  &::first-letter {
+    margin-right: 0.2em;
+  }
 
   ${up(Breakpoints.LG)} {
     grid-area: unset;
@@ -90,7 +93,7 @@ export const StyledStatusTag = styled(StatusTag)`
   }
 `;
 
-export const Arrow = styled(ReactSVG)`
+export const ArrowIcon = styled(ReactSVG)`
   display: none;
 
   ${up(Breakpoints.LG)} {

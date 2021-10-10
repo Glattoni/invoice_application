@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { useThemeContext } from '../../contexts/themeContext/ThemeStore';
+import { useThemeContext } from '../../context/theme_context';
 import { themes } from '../../constants/themes';
 
 const Theme: FC<ReactNode> = ({ children }) => {

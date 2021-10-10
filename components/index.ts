@@ -4,6 +4,14 @@ import Button from './Button/Button';
 import FilterByStatus from './FilterByStatus/FilterByStatus';
 import Header from './Header/Header';
 import Placeholder from './Placeholder/Placeholder';
-import Invoice from './Invoice/Invoice';
+import InvoiceCardLink from './InvoiceCardLink/InvoiceCardLink';
 
-export { Sidebar, Theme, Button, FilterByStatus, Header, Placeholder, Invoice };
+export {
+  Sidebar,
+  Theme,
+  Button,
+  FilterByStatus,
+  Header,
+  Placeholder,
+  InvoiceCardLink,
+};
