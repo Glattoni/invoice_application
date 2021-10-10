@@ -32,7 +32,9 @@ export const Home: FC<Props> = ({ data }) => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const response = await fetch('http://localhost:3000/api/invoices');
+  const response = await fetch(
+    'https://invoice-application-ts.netlify.app/api/invoices'
+  );
   const data = await response.json();
 
   if (!data) {
