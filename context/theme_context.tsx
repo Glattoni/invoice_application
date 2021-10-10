@@ -1,21 +1,21 @@
 import React, {
+  FC,
   useState,
   createContext,
-  FC,
   useContext,
   ReactNode,
 } from 'react';
 
-import { themes } from '../../constants/themes';
+import { themes } from '../constants/themes';
 
-type ContextProps = {
+type Props = {
   theme: keyof typeof themes;
   toggleTheme: () => void;
 };
 
-const ThemeContext = createContext<Partial<ContextProps>>({});
+const ThemeContext = createContext<Partial<Props>>({});
 
-const ThemeStore: FC<ReactNode> = ({ children }) => {
+const ThemeProvider: FC<ReactNode> = ({ children }) => {
   const [theme, setTheme] = useState<keyof typeof themes>('light');
 
   const toggleTheme = () => {
@@ -31,4 +31,4 @@ const ThemeStore: FC<ReactNode> = ({ children }) => {
 
 const useThemeContext = () => useContext(ThemeContext);
 
-export { ThemeStore, ThemeContext, useThemeContext };
+export { ThemeProvider, ThemeContext, useThemeContext };

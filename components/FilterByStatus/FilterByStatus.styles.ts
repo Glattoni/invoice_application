@@ -47,11 +47,9 @@ export const OptionList = styled.ul<{ isOpen: boolean }>`
   max-width: 12rem;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  ${({ theme }) => `
-    background-color: ${theme.colors.martinique};
-    box-shadow: ${theme.boxShadows.statusFilter};
-    transition: ${theme.transitions.primary('opacity')};
-  `}
+  background-color: ${({ theme }) => theme.colors.martinique};
+  box-shadow: ${({ theme }) => theme.boxShadows.statusFilter};
+  transition: ${({ theme }) => theme.transitions.primary('opacity')};
 
   ${up(Breakpoints.LG)} {
     width: 12rem;

@@ -1,14 +1,17 @@
 import type { AppProps } from 'next/app';
-import { ThemeStore } from '../contexts/themeContext/ThemeStore';
+import { InvoicesProvider } from '../context/invoices_context';
+import { ThemeProvider } from '../context/theme_context';
 import { Theme } from '../components';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeStore>
-      <Theme>
-        <Component {...pageProps} />
-      </Theme>
-    </ThemeStore>
+    <InvoicesProvider>
+      <ThemeProvider>
+        <Theme>
+          <Component {...pageProps} />
+        </Theme>
+      </ThemeProvider>
+    </InvoicesProvider>
   );
 }
 export default MyApp;

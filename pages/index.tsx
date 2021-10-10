@@ -1,29 +1,51 @@
+import { FC } from 'react';
+import { GetStaticProps } from 'next';
+import { Sidebar, Header, Placeholder, InvoiceCardLink } from '../components';
+import { Invoice } from '../types';
 import { GlobalStyle } from '../styles/globals';
 import { Main, Container, InvoiceList } from '../styles';
-import { Sidebar, Header, Placeholder, Invoice } from '../components';
 
-export default function Home() {
+type Props = {
+  data: Invoice[];
+};
+
+export const Home: FC<Props> = ({ data }) => {
   return (
     <>
       <Sidebar />
       <Main>
         <Container>
           <Header />
-          {/* <Placeholder /> */}
           <InvoiceList>
-            <li>
-              <Invoice url='/invoice/1' status='paid' />
-            </li>
-            <li>
-              <Invoice url='/invoice/2' status='pending' />
-            </li>
-            <li>
-              <Invoice url='/invoice/3' status='draft' />
-            </li>
+            {data.map((invoice) => (
+              <li key={invoice.id}>
+                <InvoiceCardLink {...invoice} />
+              </li>
+            ))}
+            {!data.length && <Placeholder />}
           </InvoiceList>
         </Container>
       </Main>
       <GlobalStyle />
     </>
   );
-}
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const response = await fetch(
+    'https://invoice-application-ts.netlify.app/api/invoices'
+  );
+  const data = await response.json();
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: { data },
+  };
+};
+
+export default Home;
